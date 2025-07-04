@@ -1,0 +1,51 @@
+John Doe
+Software Engineer
+Email: john.doe@email.com
+Phone: (555) 123-4567
+LinkedIn: linkedin.com/in/johndoe
+
+PROFESSIONAL SUMMARY
+Experienced software engineer with 5+ years of expertise in full-stack development, specializing in React, Node.js, and cloud technologies. Proven track record of delivering scalable web applications and leading cross-functional teams to achieve project goals.
+
+TECHNICAL SKILLS
+- Programming Languages: JavaScript, Python, Java, TypeScript
+- Frontend: React, Vue.js, HTML5, CSS3, Redux
+- Backend: Node.js, Express.js, Django, RESTful APIs
+- Database: MongoDB, PostgreSQL, MySQL
+- Cloud: AWS (EC2, S3, Lambda), Docker, Kubernetes
+- Tools: Git, Jenkins, Jira, Agile/Scrum
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer - Tech Solutions Inc. (2021-Present)
+- Led development of customer-facing web application serving 100K+ users
+- Improved application performance by 40% through code optimization and caching strategies
+- Mentored junior developers and conducted code reviews
+- Collaborated with product managers to define technical requirements
+
+Software Engineer - Digital Innovations LLC (2019-2021)
+- Developed and maintained multiple React-based web applications
+- Collaborated with UX/UI designers to implement responsive designs
+- Integrated third-party APIs and payment processing systems
+- Participated in agile development processes and sprint planning
+
+Junior Developer - StartupTech (2018-2019)
+- Built responsive web interfaces using modern JavaScript frameworks
+- Worked on database design and optimization
+- Contributed to open-source projects and internal tools
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of Technology (2014-2018)
+GPA: 3.7/4.0
+
+PROJECTS
+- E-commerce Platform: Built a full-stack e-commerce solution using React and Node.js
+- Task Management App: Developed a collaborative task management application
+- Open Source Contributions: Active contributor to several React and Node.js libraries
+
+CERTIFICATIONS
+- AWS Certified Developer - Associate (2022)
+- React Developer Certification (2021)
+- Agile/Scrum Master Certification (2020)
+

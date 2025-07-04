@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer - Get Your Dream Job</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>AI Resume Analyzer</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#analyzer" class="nav-link">Analyzer</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transform Your Resume with 
+                    <span class="gradient-text">AI Intelligence</span>
+                </h1>
+                <p class="hero-description">
+                    Upload your resume, paste a job description, and let our AI analyze the perfect match. 
+                    Get personalized recommendations and generate ATS-friendly resumes that land interviews.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToAnalyzer()">
+                        <i class="fas fa-rocket"></i>
+                        Start Analysis
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/ai-recruitment.jpg" alt="AI in Recruitment" class="hero-img">
+                <div class="floating-card card-1">
+                    <i class="fas fa-check-circle"></i>
+                    <span>ATS Optimized</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-brain"></i>
+                    <span>AI Powered</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-chart-line"></i>
+                    <span>95% Match Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-description">
+                    Everything you need to create the perfect resume for any job application
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3 class="feature-title">Easy Upload</h3>
+                    <p class="feature-description">
+                        Simply upload your existing resume in PDF, DOC, or TXT format. 
+                        Our AI will extract and analyze all relevant information.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="feature-title">Job Analysis</h3>
+                    <p class="feature-description">
+                        Paste any job description and our AI will analyze requirements, 
+                        skills, and qualifications to match against your profile.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">AI Recommendations</h3>
+                    <p class="feature-description">
+                        Get detailed insights on skill gaps, missing qualifications, 
+                        and specific improvements to increase your chances.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="feature-title">ATS-Friendly Resume</h3>
+                    <p class="feature-description">
+                        Generate a perfectly formatted, ATS-optimized resume 
+                        tailored specifically for your target job.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="feature-title">Match Score</h3>
+                    <p class="feature-description">
+                        See your compatibility score with the job and understand 
+                        exactly what makes you a strong candidate.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3 class="feature-title">Instant Download</h3>
+                    <p class="feature-description">
+                        Download your optimized resume in multiple formats 
+                        ready for immediate job applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Analyzer Section -->
+    <section id="analyzer" class="analyzer">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Resume Analyzer</h2>
+                <p class="section-description">
+                    Upload your resume and job description to get started
+                </p>
+            </div>
+
+            <!-- Stepper -->
+            <div class="stepper" id="stepper">
+                <div class="step-indicator" data-step="1">
+                    <span class="step-circle">1</span>
+                    <span class="step-label">Upload Resume</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="2">
+                    <span class="step-circle">2</span>
+                    <span class="step-label">Job Description</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-indicator" data-step="3">
+                    <span class="step-circle">3</span>
+                    <span class="step-label">AI Analysis</span>
+                </div>
+            </div>
+
+            <div class="multistep-container">
+                <!-- Step 1: Upload Resume -->
+                <div class="multistep-step" id="multistep-step1">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h3>Upload Your Resume</h3>
+                    </div>
+                    <div class="upload-area" id="resumeUpload">
+                        <div class="upload-content">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h4>Drop your resume here</h4>
+                            <p>or click to browse files</p>
+                            <span class="file-types">Supports PDF, DOC, DOCX, TXT</span>
+                        </div>
+                        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt" hidden>
+                    </div>
+                    <div class="uploaded-file" id="uploadedResume" style="display: none;">
+                        <i class="fas fa-file-alt"></i>
+                        <span class="file-name"></span>
+                        <button class="remove-file" onclick="removeFile('resume')">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="step-nav">
+                        <button class="btn btn-primary" id="toStep2Btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Job Description -->
+                <div class="multistep-step" id="multistep-step2" style="display:none;">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h3>Paste Job Description</h3>
+                    </div>
+                    <div class="job-description-area">
+                        <textarea 
+                            id="jobDescription" 
+                            placeholder="Paste the complete job description here including requirements, responsibilities, and qualifications..."
+                            rows="10"
+                        ></textarea>
+                        <div class="textarea-footer">
+                            <span class="char-count">0 characters</span>
+                            <button class="btn btn-small" onclick="clearJobDescription()">Clear</button>
+                        </div>
+                    </div>
+                    <div class="step-nav">
+                        <button class="btn btn-secondary" id="backToStep1Btn">Back</button>
+                        <button class="btn btn-primary" id="toStep3Btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Analysis & Results -->
+                <div class="multistep-step" id="multistep-step3" style="display:none;">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <h3>AI Analysis</h3>
+                    </div>
+                    <div class="analysis-controls">
+                        <button class="btn btn-primary btn-large" id="analyzeBtn" onclick="startAnalysis()">
+                            <i class="fas fa-brain"></i>
+                            Analyze with AI
+                        </button>
+                        <p class="analysis-note">
+                            Our AI will analyze your resume against the job requirements and provide detailed recommendations.
+                        </p>
+                    </div>
+                    <div class="step-nav">
+                        <button class="btn btn-secondary" id="backToStep2Btn">Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-container" id="loadingContainer" style="display: none;">
+                <div class="loading-spinner"></div>
+                <h3>Analyzing Your Resume...</h3>
+                <p>Our AI is comparing your profile with job requirements</p>
+                <div class="loading-steps">
+                    <div class="loading-step active">
+                        <i class="fas fa-file-text"></i>
+                        <span>Parsing resume content</span>
+                    </div>
+                    <div class="loading-step">
+                        <i class="fas fa-search"></i>
+                        <span>Analyzing job requirements</span>
+                    </div>
+                    <div class="loading-step">
+                        <i class="fas fa-brain"></i>
+                        <span>Generating recommendations</span>
+                    </div>
+                    <div class="loading-step">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Creating optimized resume</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-container" id="resultsContainer" style="display: none;">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <div class="match-score">
+                        <div class="score-circle">
+                            <span class="score-number" id="matchScore">0</span>
+                            <span class="score-label">% Match</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-grid">
+                    <!-- Job Suitability -->
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-thumbs-up"></i>
+                            <h3>Job Suitability</h3>
+                        </div>
+                        <div class="card-content" id="suitabilityContent">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Skill Gaps -->
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <h3>Skill Gaps & Missing Requirements</h3>
+                        </div>
+                        <div class="card-content" id="skillGapsContent">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="result-card">
+                        <div class="card-header">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Improvement Recommendations</h3>
+                        </div>
+                        <div class="card-content" id="recommendationsContent">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+                    </div>
+
+                    <!-- ATS Resume -->
+                    <div class="result-card full-width">
+                        <div class="card-header">
+                            <i class="fas fa-file-download"></i>
+                            <h3>Your Optimized ATS Resume</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="resume-preview" id="resumePreview">
+                                <!-- Generated resume will be displayed here -->
+                            </div>
+                            <div class="resume-actions">
+                                <button class="btn btn-primary" onclick="downloadResume()">
+                                    <i class="fas fa-download"></i>
+                                    Download Resume
+                                </button>
+                                <button class="btn btn-secondary" onclick="editResume()">
+                                    <i class="fas fa-edit"></i>
+                                    Edit Resume
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn-outline" onclick="startNewAnalysis()">
+                        <i class="fas fa-redo"></i>
+                        Analyze Another Job
+                    </button>
+                    <button class="btn btn-primary" onclick="shareResults()">
+                        <i class="fas fa-share"></i>
+                        Share Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About AI Resume Analyzer</h2>
+                    <p>
+                        Our platform leverages cutting-edge AI technology powered by Meta's Llama 3.3 70B model 
+                        to provide intelligent resume analysis and optimization. We understand that finding the 
+                        right job requires more than just a good resume – it requires the perfect match between 
+                        your skills and the employer's needs.
+                    </p>
+                    <p>
+                        With our AI-driven approach, we analyze thousands of data points from your resume and 
+                        compare them against job requirements to provide actionable insights that significantly 
+                        improve your chances of landing interviews.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Private</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-bolt"></i>
+                            <span>Lightning Fast</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <span>Industry Leading</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/ai-future.webp" alt="AI Future" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Resume Analyzer</span>
+                    </div>
+                    <p>Transforming careers with AI-powered resume optimization.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#analyzer">Resume Analysis</a></li>
+                        <li><a href="#analyzer">ATS Optimization</a></li>
+                        <li><a href="#analyzer">Skill Gap Analysis</a></li>
+                        <li><a href="#analyzer">Job Matching</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://x.com/AnikCodes" target="_blank" rel="noopener" title="X (Twitter)"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/anikdascodes/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/anikdascodes" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI Resume Analyzer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
