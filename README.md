@@ -55,52 +55,7 @@ resume-analyzer-package/
 └── README.md             # This documentation
 ```
 
-## Setup Instructions
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package installer)
-
-### Installation
-
-1. **Extract the project files**
-   ```bash
-   unzip resume-analyzer-package.zip
-   cd resume-analyzer-package
-   ```
-
-2. **Create and activate virtual environment**
-   ```bash
-   python -m venv venv
-   
-   # On Windows:
-   venv\Scripts\activate
-   
-   # On macOS/Linux:
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure environment variables**
-   - The `.env` file is already included with the Together AI API key
-   - If you need to update it, edit the `.env` file:
-   ```
-   TOGETHER_API_KEY=your_api_key_here
-   FLASK_ENV=development
-   SECRET_KEY=your_secret_key_here
-   ```
-
-5. **Run the application**
-   ```bash
-   python src/main.py
-   ```
-
-6. **Access the application**
-   - Open your browser and go to: `http://localhost:5000`
 
 ## Usage Guide
 
@@ -130,42 +85,7 @@ resume-analyzer-package/
 - Download the optimized resume in HTML format
 - Use the generated resume for job applications
 
-## API Endpoints
 
-### Health Check
-```
-GET /api/health
-```
-Returns the API status.
-
-### Resume Analysis
-```
-POST /api/analyze
-```
-**Parameters:**
-- `resume` (file): Resume file (PDF, DOC, DOCX, TXT)
-- `jobDescription` (text): Job description text
-
-**Response:**
-```json
-{
-  "matchScore": 85,
-  "suitability": {
-    "overall": "Strong candidate with relevant experience",
-    "strengths": ["Technical skills", "Experience"],
-    "concerns": ["Missing certifications"]
-  },
-  "skillGaps": {
-    "missing": ["AWS certification"],
-    "weak": ["Leadership experience"]
-  },
-  "recommendations": [
-    "Add AWS certification",
-    "Highlight leadership experience"
-  ],
-  "optimizedResume": "<html>...</html>"
-}
-```
 
 ## File Processing
 
@@ -203,82 +123,5 @@ The application supports multiple file formats:
 - **CORS Protection**: Configured for secure frontend-backend communication
 - **Input Sanitization**: All user inputs are validated and sanitized
 
-## Troubleshooting
 
-### Common Issues
-
-1. **API Key Error**
-   - Ensure the Together AI API key is correctly set in `.env`
-   - Check API key validity and quota
-
-2. **File Upload Issues**
-   - Verify file format is supported (PDF, DOC, DOCX, TXT)
-   - Check file size (max 16MB)
-   - Ensure file is not corrupted
-
-3. **Analysis Fails**
-   - Check internet connection for API calls
-   - Verify job description is at least 50 characters
-   - Ensure resume content is extractable
-
-4. **Server Won't Start**
-   - Verify Python version (3.8+)
-   - Check all dependencies are installed
-   - Ensure port 5000 is available
-
-### Debug Mode
-The application runs in debug mode by default. Check the console for detailed error messages.
-
-## Development
-
-### Adding New Features
-1. **Frontend**: Modify files in `src/static/`
-2. **Backend**: Add routes in `src/routes/`
-3. **Database**: Update models in `src/models/`
-
-### Testing
-- Use the included `sample-resume.txt` for testing
-- Test with various job descriptions
-- Verify file upload with different formats
-
-## Dependencies
-
-### Python Packages
-- Flask: Web framework
-- flask-cors: Cross-origin resource sharing
-- PyPDF2: PDF text extraction
-- python-docx: DOCX file processing
-- requests: HTTP client for API calls
-- python-dotenv: Environment variable management
-
-### Frontend Libraries
-- Font Awesome: Icons
-- Google Fonts: Typography
-
-## License
-
-This project is for educational and demonstration purposes.
-
-## Support
-
-For issues or questions:
-1. Check the troubleshooting section
-2. Review the console logs for error messages
-3. Verify API key and internet connection
-4. Test with the provided sample files
-
-## Future Enhancements
-
-Potential improvements:
-- Multiple resume format exports (PDF, Word)
-- Resume templates and themes
-- Batch processing for multiple jobs
-- User accounts and history
-- Advanced analytics and reporting
-- Integration with job boards
-- Mobile application
-
----
-
-**Note**: This application uses the Together AI API which requires an internet connection and valid API key. The included API key is for demonstration purposes.
 
