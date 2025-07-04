@@ -1,6 +1,6 @@
 # AI Resume Analyzer
 
-A comprehensive web application that analyzes resumes against job descriptions using AI, provides improvement suggestions, and generates ATS-friendly resumes.
+AI Resume Analyzer is a web application that uses AI to evaluate resumes against job descriptions. Users upload their resume (PDF, DOC, DOCX, or TXT) and paste a job description; the app analyzes compatibility, identifies skill gaps, and generates actionable improvement suggestions along with an ATS-friendly resume. Built with Flask and integrated with Together AI's Llama model, it features a modern UI and supports multiple file formats for a seamless, insightful job application experience.
 
 ## Features
 

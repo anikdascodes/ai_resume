@@ -1,5 +1,7 @@
 # Quick Start Guide
 
+AI Resume Analyzer is a web app that uses AI to compare your resume with a job description, highlight skill gaps, and generate ATS-friendly resumes. Upload your resume (PDF, DOC, DOCX, or TXT), paste a job description, and get instant, actionable feedback.
+
 ## 🚀 Get Started in 3 Minutes
 
 ### Option 1: Automatic Setup (Recommended)

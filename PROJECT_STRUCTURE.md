@@ -1,35 +1,34 @@
 # Project Structure Overview
 
-## 📁 Directory Layout
+AI Resume Analyzer is a web app that uses AI to compare resumes with job descriptions, highlight skill gaps, and generate ATS-friendly resumes. Below is the project structure:
 
 ```
-resume-analyzer-package/
-├── 📄 README.md                    # Comprehensive documentation
-├── 📄 QUICKSTART.md                # Quick setup guide
-├── 📄 PROJECT_STRUCTURE.md         # This file
-├── 📄 setup.py                     # Automated setup script
-├── 📄 requirements.txt             # Python dependencies
-├── 📄 .env                         # Environment variables (API keys)
-├── 📄 sample-resume.txt            # Sample resume for testing
-├── 📁 venv/                        # Python virtual environment
-├── 📁 src/                         # Source code directory
-│   ├── 📄 main.py                  # Flask application entry point
-│   ├── 📁 static/                  # Frontend files (served by Flask)
-│   │   ├── 📄 index.html           # Main HTML page
-│   │   ├── 📄 styles.css           # CSS styling
-│   │   ├── 📄 script.js            # JavaScript functionality
-│   │   └── 📁 assets/              # Images and static assets
-│   │       └── 📁 images/          # Image files
-│   │           ├── 🖼️ ai-recruitment.jpg
-│   │           ├── 🖼️ resume-sample.jpg
-│   │           └── 🖼️ ai-future.webp
-│   ├── 📁 routes/                  # Flask route handlers
-│   │   ├── 📄 analysis.py          # AI analysis endpoints
-│   │   └── 📄 user.py              # User management routes
-│   ├── 📁 models/                  # Database models
-│   │   └── 📄 user.py              # User model definition
-│   └── 📁 database/                # Database files
-│       └── 📄 app.db               # SQLite database
+ai_resume/
+├── README.md                    # Project overview and usage
+├── QUICKSTART.md                # Quick setup guide
+├── PROJECT_STRUCTURE.md         # This file
+├── setup.py                     # Automated setup script
+├── requirements.txt             # Python dependencies
+├── .env                         # Environment variables (API keys)
+├── sample-resume.txt            # Sample resume for testing
+├── src/                         # Source code directory
+│   ├── main.py                  # Flask application entry point
+│   ├── static/                  # Frontend files (served by Flask)
+│   │   ├── index.html           # Main HTML page
+│   │   ├── styles.css           # CSS styling
+│   │   ├── script.js            # JavaScript functionality
+│   │   └── assets/              # Images and static assets
+│   │       └── images/          # Image files
+│   │           ├── ai-recruitment.jpg
+│   │           ├── resume-sample.jpg
+│   │           └── ai-future.webp
+│   ├── routes/                  # Flask route handlers
+│   │   ├── analysis.py          # AI analysis endpoints
+│   │   └── user.py              # User management routes
+│   ├── models/                  # Database models
+│   │   └── user.py              # User model definition
+│   └── database/                # Database files
+│       └── app.db               # SQLite database
 ```
 
 ## 🔧 Core Components
